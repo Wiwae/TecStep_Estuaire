@@ -23,7 +23,3 @@ def predict(data: Features):
     # Run the inferance
     prediction = model.predict(features)
     return {"prediction": prediction.tolist()}
-
-
-# to execute the app, run the following command in the terminal:
-# uvicorn main:app --host 0.0.0.0 --port 8000
