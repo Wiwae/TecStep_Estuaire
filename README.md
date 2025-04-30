@@ -3,7 +3,8 @@
 This repo contains my answer to the proposed challenge. It includes several parts:
 - *00_data_exploration* : folder containing the EDA jupyter notebook, and associated utils files
 - *01_model_deployment* : folder containing the required files for the chosen model deployment with FastAPI. It also contains a template of automation file with Apache Airflow (that has not been tested), and an (empty) test folder.
-- *Dockerfile* : file to build the image of the FastAPI service
+- *data* : folder containing the challenge data
+- *Dockerfile* : file to build the image of the FastAPI service (model inference)
 - *pyproject.toml* : file containing the needed environment description to run the code
 
 
@@ -72,7 +73,7 @@ To run the automation of the ETL, I chose to use Apache Airflow (with a template
 
 The inference is made using the *FastAPI* interface, that is serving the best trained *XGboost* model, by *http* requests.
 
-All the data is stored in a PostGRESQL Database (for instance using one only table, as the one provided in data_challenge.csv), with which we communicate through the *sqlachemy* python library.
+All the data is stored in a PostGRESQL Database (for instance using one only table, as the one provided in data_challenge.csv), with which we communicate through the *sqlachemy* python library. For good practices purposes, it can be useful to use a DB versioning software such as *Alembic* (that comes with SQLAlchemy): this would allow to perform migrations.
 
 The computed values are thus available in the database.
 

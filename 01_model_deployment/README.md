@@ -1,3 +1,3 @@
 # Model Deployment
 
-See README.md in Estuaire folder.
+See README.md in TecStep_Estuaire folder.
