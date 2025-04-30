@@ -64,7 +64,7 @@ The proposed architecture is thought for an On-Premise use, but it can be adapte
 
 The global schema is:
 
-![alt text](Estuaire.drawio(1).png)
+![alt text](pictures/Estuaire.drawio(1).png)
 
 I assumed that input sources are given, each at some point for the month, as csv files, that are stored locally on the server.
 
